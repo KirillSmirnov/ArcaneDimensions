@@ -2054,7 +2054,7 @@ void(vector virtmin, vector virtsize) Hud_DrawIntermission =
 	// Generate complete string and then draw 1 character at time
 	// Uses Sprintf function to feed values into final string
 	// This function should be supported by Advanced engines
-	Hud_DrawCharFont24(pos+[144, 64], sprintf("%3.0f:%02.0f", intermission_time/60, intermission_time%60));
+	Hud_DrawCharFont24(pos+[144, 64], sprintf("%3.0f:%02.0f", floor(intermission_time/60), intermission_time%60));
 	Hud_DrawCharFont24(pos+[144, 104], sprintf("%3.0f/%.0f", getstatf(CLIENT_FOUNDSECRETS), getstatf(CLIENT_TOTALSECRETS)));
 	Hud_DrawCharFont24(pos+[144, 144], sprintf("%3.0f/%.0f", getstatf(CLIENT_KILLEDMONSTERS), getstatf(CLIENT_TOTALMONSTERS)));
 };
